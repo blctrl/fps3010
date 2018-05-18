@@ -1,0 +1,50 @@
+# ai record
+file "$(TOP)/fpsApp/Db/ai.template"
+{
+pattern
+{    P,       R,    			PORT,   	ADDR, 		userParam, 			SCAN,			PREC,		PINI,			DTYP}
+{	fps:	,getPosition0		,blc	    ,0			,getPosition		,"5 second"		,3   	 	 ,"NO"			,"asynFloat64"}
+{	fps:	,getPosition1		,blc	    ,1			,getPosition		,"5 second"		,3   		 ,"NO"			,"asynFloat64"}	
+{	fps:	,getPosition2		,blc	    ,2			,getPosition		,"5 second"		,3   		 ,"NO"			,"asynFloat64"}
+
+}
+
+
+#stringin record
+file "$(TOP)/fpsApp/Db/stringin.template"
+{
+pattern
+{    P,		R,				PORT,   ADDR,	userParam,		SCAN,				PINI,			DTYP}
+
+}
+
+
+
+#longout record
+file "$(TOP)/fpsApp/Db/longout.template"
+{
+pattern
+{    P,      	 R,    		PORT,   ADDR, 	PARAM, 		SCAN,			PINI,		DTYP	 			}
+	{fps:		reset0,		blc,	0,		reset,		"Passive",		"NO",		"asynInt32"}
+	{fps:		reset1,		blc,	1,		reset,		"Passive",		"NO",		"asynInt32"}
+	{fps:		reset2,		blc,	2,		reset,		"Passive",		"NO",		"asynInt32"}
+			
+}
+
+#longin record
+file "$(TOP)/fpsApp/Db/longin.template"
+{
+pattern
+{    P,       R,    			PORT,  	 ADDR, 		PARAM, 					SCAN,				PINI,			DTYP,			MASK,			TIMEOUT		}
+{	fps:	,adjust		   		,blc	    ,0			,adjust				,"5 second"		    ,"NO"			,"asynInt32"	,0XFFFFF 			,10}	
+{	fps:	,align		   		,blc	    ,0			,align				,"5 second"		    ,"NO"			,"asynInt32"	,0XFFFFF 			,10}
+{	fps:	,axis0Valid		    ,blc	    ,0			,axisValid			,"5 second"		    ,"NO"			,"asynInt32"	,0XFFFFF 			,10}	
+{	fps:	,axis0SignalWeak	,blc	    ,0			,axisSignalWeak		,"5 second"		    ,"NO"			,"asynInt32"	,0XFFFFF 			,10}
+{	fps:	,axis1Valid		    ,blc	    ,1			,axisValid			,"5 second"		    ,"NO"			,"asynInt32"	,0XFFFFF 			,10}	
+{	fps:	,axis1SignalWeak	,blc	    ,1			,axisSignalWeak		,"5 second"		    ,"NO"			,"asynInt32"	,0XFFFFF 			,10}
+{	fps:	,axis2Valid		    ,blc	    ,2			,axisValid			,"5 second"		    ,"NO"			,"asynInt32"	,0XFFFFF 			,10}	
+{	fps:	,axis2SignalWeak	,blc	    ,2			,axisSignalWeak		,"5 second"		    ,"NO"			,"asynInt32"	,0XFFFFF 			,10}
+
+
+}
+

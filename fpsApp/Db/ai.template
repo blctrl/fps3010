@@ -1,0 +1,7 @@
+record(ai,"$(P)$(R)") {
+    field(PINI, "$(PINI)")
+    field(DTYP, "$(DTYP)")
+    field(INP,  "@asyn($(PORT),$(ADDR))$(userParam)")
+	field(SCAN, "$(SCAN)")
+	field(PREC, "$(PREC)")
+}

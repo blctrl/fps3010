@@ -1,0 +1,8 @@
+record(longout, "$(P)$(R)") {
+  field(SCAN, "$(SCAN)")
+  field(PINI, "$(PINI)")
+  field(DTYP, "$(DTYP)")
+  field(VAL, "0")
+  field(OUT, "@asyn($(PORT),$(ADDR))$(PARAM)")
+
+}

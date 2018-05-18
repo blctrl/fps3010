@@ -1,0 +1,5 @@
+epicsEnvSet("ARCH","windows-x64")
+epicsEnvSet("IOC","iocfps")
+epicsEnvSet("TOP","C:/epics/myDriver/fps3010/blczzh-fps3010-R-1-release")
+epicsEnvSet("ASYN","C:\\epics\\mdls\\asyn4-28")
+epicsEnvSet("EPICS_BASE","C:/epics/base-3.14.12.4")
